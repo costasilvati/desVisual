@@ -14,11 +14,7 @@ namespace poo
         // Segundo construtor
         public Conta(int numero) => this.numero = numero;
 
-        public int Numero
-        {
-            get;
-            set;
-        }
+        public int Numero { get; set; }
 
         public bool Saque(float valor)
         {
