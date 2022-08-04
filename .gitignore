@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Juliana definitions
+*.DS_Store
+*AssemblyInfo.cs
+*.csproj
+
+
 # User-specific files
 *.rsuser
 *.suo
