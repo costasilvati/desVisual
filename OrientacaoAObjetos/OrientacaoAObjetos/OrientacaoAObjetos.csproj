@@ -37,6 +37,7 @@
     <Compile Include="Funcionarios\Funcionario.cs" />
     <Compile Include="Funcionarios\Diretor.cs" />
     <Compile Include="GerenciadorDeBonficacao.cs" />
+<<<<<<< HEAD
     <Compile Include="Endereco\Endereco.cs" />
     <Compile Include="Endereco\Cidade.cs" />
     <Compile Include="Endereco\Estado.cs" />
@@ -44,6 +45,21 @@
   <ItemGroup>
     <Folder Include="Funcionarios\" />
     <Folder Include="Endereco\" />
+=======
+    <Compile Include="EnderecosGerais\Cidade.cs" />
+    <Compile Include="EnderecosGerais\Estado.cs" />
+    <Compile Include="EnderecosGerais\Endereco.cs" />
+    <Compile Include="Funcionarios\Designer.cs" />
+    <Compile Include="Funcionarios\GerenteDeConta.cs" />
+    <Compile Include="Funcionarios\Auxiliar.cs" />
+    <Compile Include="SistemaInterno.cs" />
+    <Compile Include="IAutenticavel.cs" />
+    <Compile Include="Funcionarios\FuncionarioAutenticavel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Funcionarios\" />
+    <Folder Include="EnderecosGerais\" />
+>>>>>>> aula6
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
