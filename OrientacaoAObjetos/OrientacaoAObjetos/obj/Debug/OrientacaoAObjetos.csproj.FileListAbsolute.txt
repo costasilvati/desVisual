@@ -1,0 +1,6 @@
+/Users/julianacostasilva/Projects/OrientacaoAObjetos/OrientacaoAObjetos/bin/Debug/OrientacaoAObjetos.exe
+/Users/julianacostasilva/Projects/OrientacaoAObjetos/OrientacaoAObjetos/bin/Debug/OrientacaoAObjetos.pdb
+/Users/julianacostasilva/Projects/OrientacaoAObjetos/OrientacaoAObjetos/obj/Debug/OrientacaoAObjetos.csproj.AssemblyReference.cache
+/Users/julianacostasilva/Projects/OrientacaoAObjetos/OrientacaoAObjetos/obj/Debug/OrientacaoAObjetos.csproj.CoreCompileInputs.cache
+/Users/julianacostasilva/Projects/OrientacaoAObjetos/OrientacaoAObjetos/obj/Debug/OrientacaoAObjetos.exe
+/Users/julianacostasilva/Projects/OrientacaoAObjetos/OrientacaoAObjetos/obj/Debug/OrientacaoAObjetos.pdb
