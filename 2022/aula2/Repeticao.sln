@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aula2_1", "aula2\aula2_1.csproj", "{36568B2E-A2D1-4D1F-9B71-601ECBD264B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "switchCase", "switchCase", "{27F3298E-0C5E-495D-8232-C27D5ABA032C}"
+	ProjectSection(SolutionItems) = preProject
+		switchCase.cs = switchCase.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36568B2E-A2D1-4D1F-9B71-601ECBD264B4}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{36568B2E-A2D1-4D1F-9B71-601ECBD264B4}.Debug|anycpu.Build.0 = Debug|anycpu
+		{36568B2E-A2D1-4D1F-9B71-601ECBD264B4}.Release|anycpu.ActiveCfg = Release|anycpu
+		{36568B2E-A2D1-4D1F-9B71-601ECBD264B4}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9CDFFFA-388B-47B3-A0DE-464B17909466}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
