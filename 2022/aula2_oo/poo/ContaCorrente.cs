@@ -4,25 +4,22 @@ namespace poo
     public class ContaCorrente // Declaração 
     {
         // Atributos
-        public string nomeTitular;
+        public Cliente cliente;
         public string numeroConta;
         public string numeroAgencia;
         public double saldo;
         public double limite;
 
         // Construtor
-        public ContaCorrente()
+        public ContaCorrente(Cliente cliente)
         {
+            this.cliente = cliente;
         }
 
-        public ContaCorrente(string nomeTitular)
-        {
-            this.nomeTitular = nomeTitular;
-        }
-
+        override
         public string ToString()
         {
-            return $"Nome titular: {this.nomeTitular} \n" +
+            return $"Cliente: {this.cliente.ToString()} \n" +
                 $"Numero Conta {this.numeroConta} \n" +
                 $"Numero agencia {this.numeroAgencia}";
         }
