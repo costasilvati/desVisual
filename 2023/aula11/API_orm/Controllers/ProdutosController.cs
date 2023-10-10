@@ -12,55 +12,55 @@ namespace APIExemplo.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VeiculosController : ControllerBase
+    public class ProdutosController : ControllerBase
     {
         private readonly ExemploContext _context;
 
-        public VeiculosController(ExemploContext context)
+        public ProdutosController(ExemploContext context)
         {
             _context = context;
         }
 
-        // GET: api/Veiculos
+        // GET: api/Produtos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Veiculo>>> GetVeiculos()
+        public async Task<ActionResult<IEnumerable<Produto>>> GetProdutos()
         {
-          if (_context.Veiculos == null)
+          if (_context.Produtos == null)
           {
               return NotFound();
           }
-            return await _context.Veiculos.ToListAsync();
+            return await _context.Produtos.ToListAsync();
         }
 
-        // GET: api/Veiculos/5
+        // GET: api/Produtos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Veiculo>> GetVeiculo(int id)
+        public async Task<ActionResult<Produto>> GetProduto(int id)
         {
-          if (_context.Veiculos == null)
+          if (_context.Produtos == null)
           {
               return NotFound();
           }
-            var veiculo = await _context.Veiculos.FindAsync(id);
+            var produto = await _context.Produtos.FindAsync(id);
 
-            if (veiculo == null)
+            if (produto == null)
             {
                 return NotFound();
             }
 
-            return veiculo;
+            return produto;
         }
 
-        // PUT: api/Veiculos/5
+        // PUT: api/Produtos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutVeiculo(int id, Veiculo veiculo)
+        public async Task<IActionResult> PutProduto(int id, Produto produto)
         {
-            if (id != veiculo.IdVeiculo)
+            if (id != produto.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(veiculo).State = EntityState.Modified;
+            _context.Entry(produto).State = EntityState.Modified;
 
             try
             {
@@ -68,7 +68,7 @@ namespace APIExemplo.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VeiculoExists(id))
+                if (!ProdutoExists(id))
                 {
                     return NotFound();
                 }
@@ -81,48 +81,44 @@ namespace APIExemplo.Controllers
             return NoContent();
         }
 
-        // POST: api/Veiculos
+        // POST: api/Produtos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Veiculo>> PostVeiculo(Veiculo veiculo)
+        public async Task<ActionResult<Produto>> PostProduto(Produto produto)
         {
-          if (_context.Veiculos == null)
+          if (_context.Produtos == null)
           {
-              return Problem("Entity set 'ExemploContext.Veiculos'  is null.");
+              return Problem("Entity set 'ExemploContext.Produtos'  is null.");
           }
-            if(veiculo.Ano < 1930)
-            {
-                return Problem("Ano deve ser maior que 1930");
-            }
-            _context.Veiculos.Add(veiculo);
+            _context.Produtos.Add(produto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetVeiculo", new { id = veiculo.IdVeiculo }, veiculo);
+            return CreatedAtAction("GetProduto", new { id = produto.Id }, produto);
         }
 
-        // DELETE: api/Veiculos/5
+        // DELETE: api/Produtos/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteVeiculo(int id)
+        public async Task<IActionResult> DeleteProduto(int id)
         {
-            if (_context.Veiculos == null)
+            if (_context.Produtos == null)
             {
                 return NotFound();
             }
-            var veiculo = await _context.Veiculos.FindAsync(id);
-            if (veiculo == null)
+            var produto = await _context.Produtos.FindAsync(id);
+            if (produto == null)
             {
                 return NotFound();
             }
 
-            _context.Veiculos.Remove(veiculo);
+            _context.Produtos.Remove(produto);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool VeiculoExists(int id)
+        private bool ProdutoExists(int id)
         {
-            return (_context.Veiculos?.Any(e => e.IdVeiculo == id)).GetValueOrDefault();
+            return (_context.Produtos?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
